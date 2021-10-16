@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gem 'nokogiri'
+gem 'nokogiri', "~> 1.12.5"
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
 
