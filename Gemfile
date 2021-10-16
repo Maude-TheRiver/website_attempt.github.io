@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 gem 'nokogiri', "~> 1.12.5"
-gem 'rack', '~> 2.0.1'
+gem 'rack', '~> 2.1.4'
 gem 'rspec'
 gem 'webrick'
 
