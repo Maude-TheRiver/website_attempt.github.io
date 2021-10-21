@@ -1,0 +1,81 @@
+.table thead tr th {
+    background-color: #7C77A6;
+    font-weight:bold;
+    color: #ffffff;
+    text-align: left;
+    white-space: nowrap !important;
+    position: sticky;
+    top: 0;
+    z-index:1;
+}
+
+/*fix left three columns*/
+.table thead th:nth-child(1) {
+    position:sticky;
+    left:0;
+    z-index:2;
+}
+
+.table thead th:nth-child(2) {
+    position:sticky;
+    left:70px;
+    z-index:2;
+}
+
+.table thead th:nth-child(3) {
+    position:sticky;
+    left:137px;
+    z-index:2;
+}
+
+.table thead tr:nth-child(2) th:nth-child(1) {
+    position:sticky;
+    left:0;
+    z-index:2;
+}
+
+.table thead tr:nth-child(2) th:nth-child(2) {
+    position:sticky;
+    left:70px;
+    z-index:2;
+}
+
+.table thead tr:nth-child(2) th:nth-child(3) {
+    position:sticky;
+    left:137px;
+    z-index:2;
+}
+
+.table thead tr:nth-child(2) th {
+    background-color: #7C77A6;
+    font-weight:normal;
+    color: #ffffff;
+    text-align: left;
+    white-space: nowrap !important;
+    position:sticky;
+    top: 40px;
+    padding-top: 0px;
+    z-index:1;
+}
+
+.table th,
+.table td,
+.legend th,
+.legend td {
+    padding: 12px 15px;
+    background-color: #FFFFFF
+}
+
+.table tr:hover {
+    background-color: #F3F2F8;
+}
+
+.table tr:hover td {
+    background-color: transparent;
+}
+
+.table tr th {
+    background-color: #CAC8DB;
+    font-weight:normal;
+    text-align: left;
+}
