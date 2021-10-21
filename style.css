@@ -17,4 +17,5 @@ h1
 body
 {
 	background-image: url("La_croix_St-Jo.jpg");
+	background-size: auto;
 }
