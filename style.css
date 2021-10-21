@@ -7,7 +7,7 @@ p
 
 h1
 {
-	color: gray;
+	color: lightblue;
 	font-family: Impact;
 	font-style: italic;
 	text-decoration: underline;
@@ -17,5 +17,5 @@ h1
 body
 {
 	background-image: url("La_croix_St-Jo.jpg");
-	background-size: auto;
+	background-size: 100px 100px;
 }
