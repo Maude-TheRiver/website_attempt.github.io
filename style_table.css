@@ -7,6 +7,15 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+.legend {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/*sticky header*/
 .table thead tr th {
     background-color: #7C77A6;
     font-weight:bold;
@@ -17,38 +26,32 @@
     top: 0;
     z-index:1;
 }
-
 /*fix left three columns*/
-.table thead th:nth-child(1) 
-{
+.table thead th:nth-child(1) {
     position:sticky;
     left:0;
     z-index:2;
 }
 
-.table thead th:nth-child(2) 
-{
+.table thead th:nth-child(2) {
     position:sticky;
     left:70px;
     z-index:2;
 }
 
-.table thead th:nth-child(3) 
-{
+.table thead th:nth-child(3) {
     position:sticky;
     left:137px;
     z-index:2;
 }
 
-.table thead tr:nth-child(2) th:nth-child(1) 
-{
+.table thead tr:nth-child(2) th:nth-child(1) {
     position:sticky;
     left:0;
     z-index:2;
 }
 
-.table thead tr:nth-child(2) th:nth-child(2) 
-{
+.table thead tr:nth-child(2) th:nth-child(2) {
     position:sticky;
     left:70px;
     z-index:2;
@@ -60,8 +63,33 @@
     z-index:2;
 }
 
-.table thead tr:nth-child(2) th 
-{
+.table tbody tr th {
+    position:sticky;
+    left:0;
+    z-index:0;
+}
+
+.table tbody tr th:nth-child(2) {
+    position:sticky;
+    left:70px;
+    z-index:0;
+}
+
+.table tbody tr th:nth-child(3) {
+    position:sticky;
+    left:137px;
+    z-index:0;
+}
+
+.legend thead tr th {
+    background-color: #7A7A7A;
+    font-weight:bold;
+    color: #ffffff;
+    text-align: left;
+    white-space: nowrap !important;
+}
+
+.table thead tr:nth-child(2) th {
     background-color: #7C77A6;
     font-weight:normal;
     color: #ffffff;
@@ -75,27 +103,105 @@
 
 .table th,
 .table td,
-{
+.legend th,
+.legend td {
     padding: 12px 15px;
     background-color: #FFFFFF
 }
 
-.table tr:hover 
-{
+.table tr:hover {
     background-color: #F3F2F8;
 }
 
-.table tr:hover td 
-{
+.table tr:hover td {
     background-color: transparent;
 }
 
-.table tr th 
-{
+.table tr th {
     background-color: #CAC8DB;
     font-weight:normal;
     text-align: left;
 }
+
+.legend tr th {
+    background-color: #CCCCCC;
+    font-weight:normal;
+    text-align: left;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.legend tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #7C77A6;
+}
+
+.legend tbody tr:last-of-type {
+    border-bottom: 2px solid #7A7A7A;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+
+.supsub {
+    position: absolute
+}
+.subscript {
+    display:block;
+    position:relative;
+    left:2px;
+    top: -5px
+}
+.superscript {
+    display:block;
+    position:relative;
+    left:2px;
+    top: -5px
+}
+
+td[rowspan] {
+  vertical-align: top;
+}
+
+a:link {
+  color: #7C77A6;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #7C77A6;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7C77A6;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #7C77A6;
+}
+
+
+/*Author's coloring*/
 
 .mossoux
 {
