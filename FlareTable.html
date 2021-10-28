@@ -8,8 +8,9 @@
 <body>
 	<h1>Flare Table</h1>
 
-<input id='myInput' onekeyup='searchTable()' type="text", placeholder="Search...">
-
+<div class="form-group pull-right">
+    <input type="text" class="search form-control" placeholder="Search...">
+</div>
 
   <!--Legend Table-->
   <table class="legend">
@@ -45,7 +46,7 @@
 
 
   <!--Flare Table-->
-	<table id="myTable">
+	<table class="table table-striped" id="userTbl">
 		<thead>
         <tr>
           <th>ObsID</th>
@@ -6709,7 +6710,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script>
-$(document).ready(searchTable(){
+$(document).ready(function(){
     $('.search').on('keyup',function(){
         var searchTerm = $(this).val().toLowerCase();
         $('#userTbl tbody tr').each(function(){
