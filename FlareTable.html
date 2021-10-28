@@ -9,7 +9,7 @@
 	<h1>Flare Table</h1>
 
   <div class="topnav">
-    <input type="text" placeholder="Search..">
+    <input id='myInput' onekeyup='searchTable()' type="text" placeholder="Search..">
   </div>
 
   <!--Legend Table-->
@@ -46,7 +46,7 @@
 
 
   <!--Flare Table-->
-	<table class="table">
+	<table class="table" id="myTable">
 		<thead>
         <tr>
           <th>ObsID</th>
@@ -6706,5 +6706,40 @@
       <!-- and so on... -->
     </tbody>
 </table>
+
+<script type="text/javascript">
+  function searchTable()
+  {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementByTagName("tr");
+
+    for (i = 0; i<tr.length; i++)
+    {
+      td = tr[i].getElementByTagName("td");
+
+      for ( j = 0; j<td.length; j++)
+      {
+        if (td[j].innerHTML.toUpperCase().indexOf(filter)>-1) 
+          {
+            found = true
+          } /* End if */
+        } /*End for j loop */
+
+        if (found)
+        {
+          tr[i].style.display = "";
+          found = false;
+        } /* End if */
+        else
+        {
+          tr[i].style.display = "none"
+        } /* End else */
+    } /* End for i loop */
+  } /* End function */
+
+</script>
 
 </body>
