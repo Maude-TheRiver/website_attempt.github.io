@@ -26,7 +26,7 @@ function filterTable(event) {
         var firstCol = rows[i].cells[0].textContent.toUpperCase();
         var secondCol = rows[i].cells[1].textContent.toUpperCase();
         if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
-            rows[i].style.display = "";
+            rows[i].style.display = "table-cell";
         } else {
             rows[i].style.display = "none";
         }      
