@@ -1,21 +1,19 @@
 p
 {
-	color: darkred;
+	color: black;
 	font-family: Georgia; 
 	font-style: normal;
 }
 
 h1
 {
-	color: lightblue;
-	font-family: Impact;
+	color: black;
+	font-family: Georgia;
 	font-style: italic;
-	text-decoration: underline;
 	text-align: center;
 }
 
 body
 {
-	background-image: url("La_croix_St-Jo.jpg");
-	background-size: 1000px 1000px;
+	background-color: dimgrey;
 }
