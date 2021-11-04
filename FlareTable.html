@@ -18,12 +18,12 @@
 
 <script>
 function myFunction() {
-  // This algo works for filtering out authors!
+
   // Declare variables 
   var input = document.getElementById("myInput");
   var filter = input.value.toUpperCase();
   var table = document.getElementById("myTable");
-  var trs = table.getElementsByTagName("tr"); // this one keeps the formatting nicely but filter is wack
+  var trs = table.tBodies[0].getElementsByTagName("tr");
 
   // Loop through first tbody's rows
   for (var i = 0; i < trs.length; i++) {
