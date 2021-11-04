@@ -23,7 +23,7 @@ function myFunction() {
   var input = document.getElementById("myInput");
   var filter = input.value.toUpperCase();
   var tab = document.getElementById("myTable");
-  var trs = tab.getElementsByTagName("tbody"); // this one keeps the formatting nicely but filter is wack
+  var trs = tab.tBodies[0].getElementsByTagName("tbody"); // this one keeps the formatting nicely but filter is wack
 
   // Loop through first tbody's rows
   for (var i = 0; i < trs.length; i++) {
