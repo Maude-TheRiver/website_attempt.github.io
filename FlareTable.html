@@ -16,7 +16,7 @@
 </div>
 -->
 
-<!--<script>
+<script>
 function myFunction() {
   // This algo works for filtering out authors!
   // Declare variables 
@@ -51,38 +51,10 @@ function myFunction() {
   }
 
 }
-</script>-->
-<script type="text/javascript">
-function searchTableColumns() {
-      // Declare variables 
-      var input, filter, table, tr, i, j, column_length, count_td;
-      column_length = document.getElementById('myTable').rows[0].cells.length;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 1; i < tr.length; i++) { // except first(heading) row
-        count_td = 0;
-        for(j = 1; j < column_length-1; j++){ // except first column
-            td = tr[i].getElementsByTagName("td")[j];
-            /* ADD columns here that you want you to filter to be used on */
-            if (td) {
-              if ( td.innerHTML.toUpperCase().indexOf(filter) > -1)  {            
-                count_td++;
-              }
-            }
-        }
-        if(count_td > 0){
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-      }
-      
-    }
-</script>
 
-<input class="form-control" type="text" id="myInput" placeholder="Search ..." onkeyup="searchTableColumns()">
+   
+
+<input type="text" id="myInput" placeholder="Search ..." onkeyup="myFunction()">
 
   <!--Legend Table-->
   <table class="legend">
