@@ -16,14 +16,14 @@
 </div>
 -->
 
-<!--<script>
+<script>
 function myFunction() {
   // This algo works for filtering out authors!
   // Declare variables 
   var input = document.getElementById("myInput");
   var filter = input.value.toUpperCase();
   var table = document.getElementById("myTable");
-  var trs = table.tBodies[0].getElementsByTagName("tr") + table.tBodies[0].getElementsByTagName("td");
+  var trs = table.tBodies[0].getElementsByTagName("tbody");
 
   // Loop through first tbody's rows
   for (var i = 0; i < trs.length; i++) {
@@ -51,26 +51,6 @@ function myFunction() {
   }
 
 }
-</script>-->
-
-<script type="text/javascript">
-  
-$(document).ready(function(){
-
-var $rows = $('table td');
-$('#search').keyup(function() {
-
-var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-    reg = RegExp(val, 'i'),
-    text;
-
-$rows.show().filter(function() {
-    text = $(this).text().replace(/\s+/g, ' ');
-    return !reg.test(text);
-}).hide();
-});
-
-});
 </script>
 
 
