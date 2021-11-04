@@ -38,7 +38,7 @@ function myFunction() {
     for (var i2 = 0; i2 < tds.length; i2++) {
 
       // if there's a match
-      ifnot (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      if (! tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
 
         // show the row
         trs[i].style.display = "none";
