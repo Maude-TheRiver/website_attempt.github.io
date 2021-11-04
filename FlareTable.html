@@ -10,12 +10,31 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for something..">
+<input type="text" id="myInput" placeholder="Search for something..">
 <!--
 <div class="form-group pull-right">
     <input type="text" class="search form-control" placeholder="Search...">
 </div>
 -->
+
+<script>
+function filterTable(event) {
+    var filter = event.target.value.toUpperCase();
+    var rows = document.querySelector("#myTable tbody").rows;
+    
+    for (var i = 0; i < rows.length; i++) {
+        var firstCol = rows[i].cells[0].textContent.toUpperCase();
+        var secondCol = rows[i].cells[1].textContent.toUpperCase();
+        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }      
+    }
+}
+
+document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+</script>
 
   <!--Legend Table-->
   <table class="legend">
@@ -6729,23 +6748,5 @@ $(document).ready(function(){
 </script>
 -->
 
-<script>
-function filterTable(event) {
-    var filter = event.target.value.toUpperCase();
-    var rows = document.querySelector("#myTable tbody").rows;
-    
-    for (var i = 0; i < rows.length; i++) {
-        var firstCol = rows[i].cells[0].textContent.toUpperCase();
-        var secondCol = rows[i].cells[1].textContent.toUpperCase();
-        if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1) {
-            rows[i].style.display = "";
-        } else {
-            rows[i].style.display = "none";
-        }      
-    }
-}
-
-document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
-</script>
 
 </body>
